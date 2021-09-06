@@ -1,16 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap");
 
 /* font-family: 'Yeseva One', cursive; */
 
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap");
 
 /* font-family: 'Josefin Sans', sans-serif; */
 
-@import url('https://fonts.googleapis.com/css2?family=Liu+Jian+Mao+Cao&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Liu+Jian+Mao+Cao&display=swap");
 
 /* font-family: 'Liu Jian Mao Cao', cursive; */
 
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;600;700&display=swap");
 
 /* font-family: 'Oswald', sans-serif; */
 
@@ -23,22 +23,23 @@ use the fonts in other ways in the font hierarchy etc. */
 /* change these */
 
 :root {
-    --turqoise: #4ECBD9;
-    --orange: #F29966;
-    --redorange: #F26B5E;
-    --offwhite: #F2F2F2;
+    --turqoise: #4ecbd9;
+    --orange: #f29966;
+    --redorange: #f26b5e;
+    --offwhite: #f2f2f2;
     --darkgrey: #262626;
-    --ochre: #F2B872;
-    --medium-grey: #8C8A80;
-    --sharp-lime: #B0F222;
+    --ochre: #f2b872;
+    --medium-grey: #8c8a80;
+    --sharp-lime: #b0f222;
     --primary-font: "Open Sans", sans-serif;
     --secondary-font: "Droid Serif", serif;
     --main-text-color: #000;
     --white-space: 1rem;
     --primary-font-color: var(--offwhite);
-    --header-font: 'Oswald', sans-serif;
-    --accent-font: 'Liu Jian Mao Cao', cursive;
-    --body-font: 'Josefin Sans', sans-serif;
+    --header-font: "Oswald", sans-serif;
+    --accent-font: "Liu Jian Mao Cao", cursive;
+    --body-font: "Josefin Sans", sans-serif;
+    --alternate-font: "Yeseva One", cursive;
 }
 
 button {
@@ -50,17 +51,17 @@ a {
 }
 
 button:hover {
-    background-color: var(--link-hover-color);
-    transform: scale(3) rotate(40deg);
+    background-color: var(--orange);
+    transform: scale(1.05);
 }
 
 button:active {
-    background-color: var(--bg-color);
+    background-color: var(--offwhite);
 }
 
 a:hover {
-    color: var(--link-hover-color);
-    font-size: 4rem;
+    color: var(--redorange);
+    font-size: 1.6rem;
 }
 
 html {
@@ -93,27 +94,31 @@ body {
 
 .header-wrapper h1 {
     font-size: 3rem;
-    text-transform: uppercase;
-    letter-spacing: -2px;
-    padding-right: 0.75em;
-    font-weight: bold;
+    font-weight: medium;
     color: var(--offwhite);
+    font-family: var(--alternate-font);
 }
 
 .header-wrapper h2 {
-    font-size: 1.6em;
+    font-size: 1.8em;
     color: var(--offwhite);
-    font-weight: bold;
+    font-weight: medium;
     margin: var(--white-space) 0;
+    font-family: var(--header-font);
+    letter-spacing: 0.05rem;
 }
 
 .header-wrapper h3 {
-    font-size: 1.2rem;
-    font-style: italic;
+    font-family: var(--header-font);
+    font-weight: 100;
+    font-size: 1.5rem;
+    margin: var(--white-space) 0;
+    /* font-style: italic; */
 }
 
 .header-wrapper h4 {
-    font-size: 0.8rem;
+    font-size: 1rem;
+    font-family: var(--accent-font);
 }
 
 main {
@@ -125,10 +130,14 @@ section {
 }
 
 .section-heading {
-    font-style: italic;
-    font-size: 1.3rem;
-    color: var(--darkgrey);
-    margin: 0.5rem 0;
+    /* font-style: italic; */
+    font-family: var(--header-font);
+    font-size: 1.5rem;
+    font-weight: 200;
+    color: var(--offwhite);
+    background-color: var(--darkgrey);
+    padding: 1rem;
+    margin: 0.5rem 60% 1rem 0;
 }
 
 ul {
@@ -211,22 +220,25 @@ ul li:last-child {
 
 button {
     padding: 1rem;
-    border-radius: 4px;
-    background: var(--link-color);
+    /* border-radius: 2rem; */
+    background: var(--redorange);
     text-align: center;
     text-decoration: none;
-    font: bold 1.25em/1 var(--primary-font);
+    font: bold 1.5em/1 var(--header-font);
     letter-spacing: 1px;
-    color: white;
+    color: var(--offwhite);
+    border: solid 1px var(--darkgrey);
     text-transform: uppercase;
-    text-shadow: 0px -1px 0px #0374a0;
+    text-shadow: -1px -1px 0px var(--darkgrey);
     transition: all 0.2s ease;
     cursor: pointer;
     margin: 0 1rem 1rem 0;
+    padding: 1rem 2rem 1rem 2rem;
 }
 
 .secondary-button {
-    background: var(--color-5);
+    border: solid 1px var(--darkgrey);
+    background: none;
 }
 
 button:focus,
@@ -241,20 +253,42 @@ button:focus-within {
 }
 
 .h1-sample {
+    font-family: var(--alternate-font);
+    /* text-transform: uppercase; */
     font-size: 2.4rem;
     font-weight: bold;
+    /* border: solid 1px var(--offwhite); */
+    padding: 1rem;
+    background-color: var(--darkgrey);
+    /* background-color: var(--darkgrey); */
 }
 
 .h2-sample {
-    font-family: var(--secondary-font);
-    font-style: italic;
-    font-size: 1.25rem;
+    font-family: var(--header-font);
+    font-size: 1.8rem;
+    font-weight: 400;
+    border-bottom: solid 1px var(--darkgrey);
+    border-left: solid 1px var(--darkgrey);
+    margin-right: 20%;
+    color: var(--darkgrey);
+    /* color: var(--offwhite); */
+    padding: 1rem;
 }
 
 p.typography-sample {
-    font-family: var(--secondary-font);
+    font-family: var(--body-font);
+    color: var(--darkgrey);
+    /* color: var(--offwhite); */
+    font-size: 1.5rem;
+    font-weight: 300;
     line-height: 1.5;
     max-width: 960px;
+    padding: 1rem;
+    border-left: solid 1px var(--darkgrey);
+    /* background-color: var(--darkgrey); */
+    /* background-color: lightgrey; */
+    /* background-color: #2626260e; */
+    /* border-radius: 1rem; */
 }
 
 strong {
@@ -266,32 +300,41 @@ em {
 }
 
 a {
-    font-family: var(--primary-font);
-    color: var(--link-color);
-    font-weight: bold;
+    font-family: var(--body-font);
+    color: #DDF23D;
+    font-size: 1.5rem;
+    font-weight: 300;
     text-decoration: none;
     transition: all 0.2s;
 }
 
 p[class*="font-details-"] {
-    margin-top: 0.5rem;
+    margin-top: 0.8rem;
+    margin-left: .8rem;
     margin-bottom: calc(2 * var(--white-space));
-    font-size: 0.75rem;
-    font-family: var(--secondary-font);
-    color: #6f6f6f;
+    font-size: 1rem;
+    font-family: var(--body-font);
+    font-weight: 400;
+    color: var(--darkgrey);
 }
 
 .adjectives ul {
-    font-size: 2rem;
-    opacity: 0.5;
+    font-size: 1.5rem;
+    font-family: var(--accent-font);
 }
 
 .adjectives ul {
     flex-direction: column;
 }
 
+.adjectives ul ::before {
+    content: '• '
+}
+
 footer {
     font-style: italic;
+    font-family: var(--body-font);
+    font-weight: 200;
 }
 
 @media (min-width: 800px) {
